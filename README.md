@@ -1,2 +1,2 @@
 # xMIB
-#2 Kim jestem?
+# Kim jestem?
