@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xMIB - Główna</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0b0b0c;
+      --bg2:#141417;
+      --accent:#ffffff;
+      --soft:#9ca3af;
+      --card:#1b1b20;
+      --border:#2a2a32;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',system-ui,Arial,sans-serif;
+      color:white;
+      background: radial-gradient(1200px 600px at 50% -10%, #1f2937 0%, var(--bg1) 40%, #000 100%);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .container{max-width:1100px;margin:auto;padding:0 20px}
+
+    /* HERO */
+    .hero{padding:90px 0 70px;text-align:center}
+
+    .avatar{
+      width:150px;height:150px;border-radius:22px;
+      border:1px solid var(--border);
+      box-shadow:0 20px 60px rgba(0,0,0,.7);
+      margin-bottom:25px;
+      transition:.35s;
+    }
+    .avatar:hover{transform:translateY(-6px) scale(1.03)}
+
+    h1{font-size:52px;font-weight:700;margin-bottom:12px}
+    .tag{color:var(--soft);font-size:18px;margin-bottom:28px}
+
+    .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    .btn{
+      padding:14px 28px;border-radius:16px;font-weight:600;
+      border:1px solid var(--border);
+      transition:.25s;cursor:pointer;
+      background:#fff;color:#000;
+    }
+    .btn:hover{transform:translateY(-3px);background:#e5e7eb}
+
+    .btn-outline{background:transparent;color:white}
+    .btn-outline:hover{background:#1f2937}
+
+    /* ABOUT */
+    .about{padding:70px 0;background:linear-gradient(180deg, transparent, #0f0f12)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+
+    .card div{margin:14px 0;color:#d1d5db}
+
+    h2{font-size:34px;margin-bottom:16px}
+    p{color:#cbd5e1}
+
+    /* SOCIAL */
+    .social{padding:70px 0;text-align:center}
+    .social-buttons{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+
+    .social a{
+      padding:14px 24px;border-radius:16px;background:#1f1f25;
+      border:1px solid var(--border);
+      transition:.25s;
+    }
+    .social a:hover{background:#2a2a33;transform:translateY(-3px)}
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--border);
+      text-align:center;padding:30px;color:#9ca3af
+    }
+
+    /* MOBILE */
+    @media(max-width:820px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:40px}
+    }
+    html {
+  scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <!-- Zapisz swoje profilowe jako profile.png w tym samym folderze -->
+    <img src="profile.png" class="avatar" alt="@xMIB avatar">
+
+    <h1>xMIB</h1>
+    <div class="tag">Moja przestrzeń w internecie • Content • Projekty</div>
+
+    <div class="btns">
+      <a href="https://halfmc.pl" target="https://halfmc.pl" class="btn">Mój serwer</a>
+      <a href="#social" class="btn btn-outline">Zobacz więcej</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container grid">
+      <div>
+        <h2>Kim jestem?</h2>
+        <p>
+          Jestem xMIB. Buduję swój serwer minecraft o nazwie HalfMC i tworzę content w swoim stylu.
+          Ta strona to moje mini‑portfolio i centrum linków.
+        </p>
+        <br>
+        <p>
+          Jeśli chcesz współpracy, projektu albo po prostu trafiłeś tu z ciekawości —
+          jesteś we właściwym miejscu.
+        </p>
+      </div>
+
+      <div class="card">
+        <div>✔ Autentyczność</div>
+        <div>✔ Kreatywność</div>
+        <div>✔ Rozwój</div>
+        <div>✔ Własny styl</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="social" id="social">
+    <div class="container">
+      <h2>Znajdziesz mnie tutaj</h2>
+      <div class="social-buttons">
+        <a href="#">Instagram</a>
+        <a href="https://www.youtube.com/@xMIBx" target="https://www.youtube.com/@xMIBx">YouTube</a>
+        <a href="https://www.tiktok.com/@xmibxx?_r=1&_t=ZN-93QCTis1ZYs" target="https://www.tiktok.com/@xmibxx?_r=1&_t=ZN-93QCTis1ZYs">TikTok</a>
+        <a href="mailto:xmib@halfmc.pl" id="kontakt">Kontakt</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> @xMIB — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
